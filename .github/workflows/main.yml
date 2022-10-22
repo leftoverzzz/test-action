@@ -1,0 +1,15 @@
+on: [push]
+jobs:
+  hello_to_job:
+    runs-on: ubuntu-latest
+    name: greet
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: hello world action flow
+        uses: ./
+        id: hello
+        with:
+          username: 'zwc'
+      - name : output from hello step    
+        run: echo "${{steps.hello.output.time}}"
