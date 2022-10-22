@@ -5,7 +5,7 @@ jobs:
     name: greet
     steps:
       - name: hello world action flow
-        uses: actions/test-actionv1
+        uses: leftoverzzz/test-action@v1
         id: hello
         with:
           username: 'zwc'
