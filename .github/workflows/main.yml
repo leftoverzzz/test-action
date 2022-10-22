@@ -4,10 +4,8 @@ jobs:
     runs-on: ubuntu-latest
     name: greet
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: hello world action flow
-        uses: ./
+        uses: actions/test-actionv1
         id: hello
         with:
           username: 'zwc'
